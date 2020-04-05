@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ServiceNow coding challenge
 
-## Available Scripts
+## Getting started
+1. Clone the incident API repository (https://github.com/jvillagomez/ServiceNowCodingChallenge)
+2. Start the API's local server using `npm start`, your local express server will be running on port 3000
+3. Clone this repo
+2. run `npm install` in the respository
+5. run `npm start`, and you application will be running on port 8082
 
-In the project directory, you can run:
+## Components
 
-### `npm start`
+### Incidents
+Incidents will take an array of incident objects and render them into a table
+prop | type | description
+------------ | -------------  | -------------
+incidents | array | a list of incident objects
+loading | boolean | toggles the loading icon, or the component
+filter | string | value that the user wishes to filter incident records on
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### StateTotals
+StateTotals will take an object of status totals, display those totals to the user, and render a set of buttons to filter `<Incidents />` by status
+prop | type | description
+------------ | -------------  | -------------
+incidentTotals | array | a list of statuses and their total counts from the array of incidents
+loading | boolean | toggles the loading icon, or the component
+setFilter | function | updates the current filter of `<Incidents />`, argument is a string
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Heading
+Heading will render a row with a `<h2>` tag left aligned
+prop | type | description
+------------ | -------------  | -------------
+children | string | markup to wrap in an h2
 
-### `npm test`
+### Card
+A simple content container
+prop | type | description
+------------ | -------------  | -------------
+heading | string | Card heading rendered in an `<h2>`
+onClick | function | optional onClick function to wrap the card in
+children | string | content for the body of the card
+className | string | optional for adding additional classes
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## External tools used
+### create-react-app
+This project was bootstrapped using Create-React-App https://github.com/facebook/create-react-app
 
-### `npm run build`
+### bootstrap
+This project utilizes bootstrap's layout classes, mainly `row` and `col`. This allows for a responsive layout without having to write your own CSS for every breakpoint
+https://github.com/twbs/bootstrap
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### react-svg
+Allows for rendering SVG's in React
+https://github.com/tanem/react-svg
