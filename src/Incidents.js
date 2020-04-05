@@ -8,7 +8,7 @@ const Incidents = ({ incidents, loading, filter }) => {
 	const filteredIncidents = filter === '' ? incidents : incidents.filter(incident => incident.state === filter);
 
 	return (
-		loading ? <Loading /> : filteredIncidents.map((incident, i) => <Incident index={i} incident={incident} />)
+		loading ? <Loading /> : <div className='incident-container'>{filteredIncidents.map((incident, i) => <Incident index={i} incident={incident} />)}</div>
 	  );
 }
 

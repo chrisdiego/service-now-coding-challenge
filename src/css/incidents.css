@@ -1,5 +1,5 @@
 .incident-headings {
-    padding: 10px 0;
+    padding: 10px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-color: black;
@@ -7,4 +7,35 @@
 
 .incident {
     padding: 8px 10px;
+    
+}
+
+.incident .description {
+    display: block;
+}
+
+.incident .shorter-description {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .incident-container {
+        width: 100%;
+        white-space:nowrap; 
+        overflow-x: scroll;
+        
+       
+    }
+    .incidents {
+        white-space: nowrap;
+        min-width: 1200px;
+    }
+
+    .incident .description {
+        display: none;
+    }
+
+    .incident .shorter-description {
+        display: block;
+    }
 }

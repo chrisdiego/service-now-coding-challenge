@@ -10,8 +10,9 @@ const Incident = ({ incident, index }) => {
             </div>
         );
     }
+    const truncatedDescription = incident.short_description ? incident.short_description.substring(0, 20) : null;
 	return (
-        <>
+        <div className='incidents'>
             {index === 0 ? headings() : null}
             <div className={`row incident ${index % 2 === 0 ? 'bg-white' : ''}`}>
                 <div className='col'>
@@ -23,8 +24,11 @@ const Incident = ({ incident, index }) => {
                 <div className='col'>
                     {incident.priority}
                 </div>
-                <div className='col'>
+                <div className='col description'>
                     {incident.short_description}
+                </div>
+                <div className='col shorter-description'>
+                    {truncatedDescription}...
                 </div>
                 <div className='col'>
                     {incident.category}
@@ -36,7 +40,7 @@ const Incident = ({ incident, index }) => {
                     {incident.sys_created_on}
                 </div>
             </div>
-        </>
+        </div>
 	  );
 }
 
