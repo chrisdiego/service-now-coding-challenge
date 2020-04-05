@@ -1,0 +1,20 @@
+.card-container {
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 0 15px;
+}
+
+.card-container h2 {
+    padding: 5px 10px;
+    font-size: 16px;
+    color: gray;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+}
+.card-container.card-button {
+    cursor: pointer;
+}
+.card-container.card-button:hover {
+    border-color: lightblue;
+}
