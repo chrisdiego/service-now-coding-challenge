@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import './incidents.css';
+import React from 'react';
 
 const Incident = ({ incident, index }) => {
     const headings = () => {

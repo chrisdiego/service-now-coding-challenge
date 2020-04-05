@@ -1,7 +1,7 @@
 import React from 'react';
 import Incident from './Incident';
 import Loading from './Loading';
-import './incidents.css';
+import './css/incidents.css';
 
 const Incidents = ({ incidents, loading, filter }) => {
 

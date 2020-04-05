@@ -1,7 +1,8 @@
 import React from 'react';
+import './css/heading.css';
 
-const Heading = ({ children }) => (
-    <div className='row'>
+const Heading = ({ children, className }) => (
+    <div className={`row heading ${className}`}>
         <div className='col'>
             <h2>
                 {children}

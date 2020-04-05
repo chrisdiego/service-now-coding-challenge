@@ -16,5 +16,10 @@
     cursor: pointer;
 }
 .card-container.card-button:hover {
-    border-color: lightblue;
+    border-color: #007bff;
+    color: #007bff
+}
+
+.card-container.card-button:hover h2 {
+    color: #007bff
 }

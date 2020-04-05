@@ -1,6 +1,5 @@
 import React from 'react';
-import Loading from './Loading';
-import './card.css'
+import './css/card.css'
 
 const Card = ({ heading, onClick, children, className }) => {
     return (

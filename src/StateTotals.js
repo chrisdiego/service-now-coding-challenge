@@ -5,7 +5,7 @@ const StateTotals = ({ incidentTotals, setFilter }) => {
 
     return (
         <>
-            <div className='row'>
+            <div className='row section'>
                 {incidentTotals.map(state => {
                     return (
                             <div className='col'>
